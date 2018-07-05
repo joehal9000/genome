@@ -28,7 +28,7 @@
 			project.getItems( {name: "L-1"})
 	]; //Select L Hexagon
 
-	var letters = [project.getItems( {name: "A"}),
+	var bottom = [project.getItems( {name: "A"}),
 		project.getItems( {name: "B"}),
 		project.getItems( {name: "C"}),
 		project.getItems( {name: "D"}),
@@ -43,11 +43,11 @@
 ];
 
 	console.log(top[0]);
-	var origColor = (letters[0][0].fillColor);
+	var origColor = (bottom[0][0].fillColor);
 	for (var i=0; i < top.length; i++) {
 		// top[i][0].strokeColor = new Color(1,0,0); // Red outline
 		top[i][0]['isSelected'] = false;
-		top[i][0]['bottom'] = letters[i][0];
+		top[i][0]['bottom'] = bottom[i][0];
 
 		top[i][0].onClick = function(){
 			console.log("Anyone there?");
