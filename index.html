@@ -1,1 +1,69 @@
-<h1>Hello World </h1>
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="paper.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+
+//http://192.168.253.130/v08f.svg
+//https://people.cs.clemson.edu/~bullmer/processing/genomic-tree-13a.svg
+ var svgX1 = project.importSVG("http://192.168.253.132/v08g.svg",
+   onLoad = function() {
+     console.log('Successfully loaded SVG!');
+
+		var top = [project.getItems( {name: "A-1"}),
+			project.getItems( {name: "B-1"}),
+			project.getItems( {name: "C-1"}),
+			project.getItems( {name: "D-1"}),
+			project.getItems( {name: "E-1"}),
+			project.getItems( {name: "F-1"}),
+			project.getItems( {name: "G-1"}),
+			project.getItems( {name: "H-1"}),
+			project.getItems( {name: "J-1"}),
+			project.getItems( {name: "I-1"}),
+			project.getItems( {name: "K-1"}),
+			project.getItems( {name: "L-1"})
+	]; //Select L Hexagon
+
+	var letters = [project.getItems( {name: "A"}),
+		project.getItems( {name: "B"}),
+		project.getItems( {name: "C"}),
+		project.getItems( {name: "D"}),
+		project.getItems( {name: "E"}),
+		project.getItems( {name: "F"}),
+		project.getItems( {name: "G"}),
+		project.getItems( {name: "H"}),
+		project.getItems( {name: "J"}),
+		project.getItems( {name: "I"}),
+		project.getItems( {name: "K"}),
+		project.getItems( {name: "L"})
+];
+
+	console.log(top[0]);
+	var origColor = (letters[0][0].fillColor);
+	for (var i=0; i < top.length; i++) {
+		// top[i][0].strokeColor = new Color(1,0,0); // Red outline
+		top[i][0]['isSelected'] = false;
+		top[i][0]['bottom'] = letters[i][0];
+
+		top[i][0].onClick = function(){
+			console.log("Anyone there?");
+			if(!this.isSelected) 	this.bottom.fillColor = new Color(0,255,0);
+			else this.bottom.fillColor = origColor;
+			this.isSelected = !this.isSelected;
+		};
+	}
+	console.log(top);
+	top= null;
+
+
+   });
+ //debugger;
+
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" width="1000" height="1000"></canvas>
+</body>
+</html>
