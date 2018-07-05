@@ -5,6 +5,7 @@
 <head>
 <!-- Load the Paper.js library -->
 <script type="text/javascript" src="paper.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
 <!-- Define inlined PaperScript associate it with myCanvas -->
 <script type="text/paperscript" canvas="myCanvas">
 
@@ -55,7 +56,11 @@
 			else this.bottom.fillColor = origColor;
 			this.isSelected = !this.isSelected;
 		};
+
 	}
+	$(document).ready(function() {
+		console.log(" TEST TEST")
+	});
 	console.log(top);
 	top= null;
 
