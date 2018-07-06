@@ -49,7 +49,7 @@
 		// top[i][0].strokeColor = new Color(1,0,0); // Red outline
 		top[i][0]['isSelected'] = false;
 		top[i][0]['bottom'] = bottom[i][0];
-		//TODO Allow light selection during hover. Prehaps the trasparent tile
+
 		top[i][0].onClick = function(){
 			console.log("Anyone there?");
 			if(!this.isSelected) 	this.bottom.fillColor = new Color(0,255,0);
@@ -57,10 +57,38 @@
 			this.isSelected = !this.isSelected;
 		};
 
+		/*TODO When should the color change?
+		* Only highlight unselected objects or...?
+		*/
+		top[i][0].onMouseEnter = function(){
+			this.bottom.fillColor = new Color(0, 255, 0, 0.3);
+		};
+
+		top[i][0].onMouseLeave = function(){
+			this.bottom.fillColor = this.isSelected ? new Color(0,255,0) : origColor;
+		};
+
+
+		//TODO Allow light selection during hover. Prehaps the trasparent tile
+//FIXME Probably should delete this.  jquery is not best solution
+		// var $this = $(top[i][0]);
+		//
+		// // $(this).click(function(){
+		// // 	console.log("Clicked");
+		// // });
+
+		// var $test = $(top[i][0]);
+		// $(document).ready(function() {
+		// 	$(test).hover(function(){
+		// 		console.log($(test));
+		// 	}),
+		// 	 function(){
+		// 		 console.log("LEAVE");
+		// 	 }
+		// });
+
 	}
-	$(document).ready(function() {
-		console.log(" TEST TEST")
-	});
+
 	console.log(top);
 	top= null;
 
