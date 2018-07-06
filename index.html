@@ -1,5 +1,8 @@
 <!--TangViz-->
 <!--June 2018-->
+
+
+<!--TODO https://codepen.io/seme332/pen/reJOwo Add Shadow to indicate selection
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +14,7 @@
 
 //http://192.168.253.130/v08f.svg
 //https://people.cs.clemson.edu/~bullmer/processing/genomic-tree-13a.svg
- var svgX1 = project.importSVG("https://joehal9000.github.io/genome/v08g.svg",
+ var svgX1 = project.importSVG("https://joehal9000.github.io/genome/v08h.svg",
    onLoad = function() {
      console.log('Successfully loaded SVG!');
 
@@ -46,7 +49,7 @@
 	console.log(top[0]);
 	var origColor = (bottom[0][0].fillColor);
 	for (var i=0; i < top.length; i++) {
-		// top[i][0].strokeColor = new Color(1,0,0); // Red outline
+		top[i][0].strokeColor = new Color(0,0,0); // Red outline
 		top[i][0]['isSelected'] = false;
 		top[i][0]['bottom'] = bottom[i][0];
 
@@ -62,30 +65,23 @@
 		*/
 		top[i][0].onMouseEnter = function(){
 			this.bottom.fillColor = new Color(0, 255, 0, 0.3);
+			this.bottom.position += new Point(0,-4);
+			this.position += new Point(0,-4);
+
 		};
 
 		top[i][0].onMouseLeave = function(){
 			this.bottom.fillColor = this.isSelected ? new Color(0,255,0) : origColor;
+			//NOTE Would this move the top as well
+			this.bottom.position += new Point(0,4);
+			this.position += new Point(0,4);
+
 		};
 
 
 		//TODO Allow light selection during hover. Prehaps the trasparent tile
 //FIXME Probably should delete this.  jquery is not best solution
-		// var $this = $(top[i][0]);
-		//
-		// // $(this).click(function(){
-		// // 	console.log("Clicked");
-		// // });
 
-		// var $test = $(top[i][0]);
-		// $(document).ready(function() {
-		// 	$(test).hover(function(){
-		// 		console.log($(test));
-		// 	}),
-		// 	 function(){
-		// 		 console.log("LEAVE");
-		// 	 }
-		// });
 
 	}
 
