@@ -77,22 +77,22 @@
 		<polygon id="F" inkscape:label="#polygon3920" class="st2" points="158.7,273.7 171.2,273.7 183.5,273.7 189.8,284.4 195.9,295.1
 			189.8,306 183.5,316.7 171.2,316.7 158.7,316.7 152.4,306 146.2,295.1 152.4,284.4 		">
 		</polygon>
-		<text id="text3976" transform="matrix(1 0 0 1 165.6786 301.5286)" class="st6 st7 st8">F</text>
+		<text id="textF" transform="matrix(1 0 0 1 165.6786 301.5286)" class="st6 st7 st8">F</text>
 	</g>
-	<text id="text3978" transform="matrix(1 0 0 1 78.8821 251.7599)" class="st6 st7 st8">A</text>
+	<text id="textA" transform="matrix(1 0 0 1 78.8821 251.7599)" class="st6 st7 st8">A</text>
 	<g>
 		<polygon id="B" inkscape:label="#polygon3932" class="st2" points="72.5,273.7 85,273.7 97.2,273.7 103.6,284.4 109.7,295.1
 			103.6,306 97.2,316.7 85,316.7 72.5,316.7 66.2,306 60,295.1 66.2,284.4 		">
 		</polygon>
-		<text id="text3980" transform="matrix(1 0 0 1 78.8667 301.5286)" class="st6 st7 st8">B</text>
+		<text id="textB" transform="matrix(1 0 0 1 78.8667 301.5286)" class="st6 st7 st8">B</text>
 	</g>
 	<g>
 		<polygon id="C" inkscape:label="#polygon3944" class="st2" points="72.5,323.3 85,323.3 97.2,323.3 103.6,334.1 109.7,344.9
 			103.6,355.6 97.2,366.5 85,366.5 72.5,366.5 66.2,355.6 60,344.9 66.2,334.1 		">
 		</polygon>
-		<text id="text3982" transform="matrix(1 0 0 1 78.2357 351.2972)" class="st6 st7 st8">C</text>
+		<text id="textC" transform="matrix(1 0 0 1 78.2357 351.2972)" class="st6 st7 st8">C</text>
 	</g>
-	<g >
+	<g>
 		<polygon id="D" class="st2" points="115.5,248.7 128,248.7 140.4,248.7 146.6,259.4 152.9,270.3 146.6,281 140.4,291.7 128,291.7
 			115.5,291.7 109.4,281 103,270.3 109.4,259.4 		"/>
 		<text id="textD" transform="matrix(1 0 0 1 120.7021 276.645)" class="st6 st7 st8">D</text>
@@ -104,34 +104,34 @@
 		<polygon id="G" inkscape:label="#polygon3940" class="st2" points="158.7,323.3 171.2,323.3 183.5,323.3 189.8,334.1 195.9,344.9
 			189.8,355.6 183.5,366.5 171.2,366.5 158.7,366.5 152.4,355.6 146.2,344.9 152.4,334.1 		">
 		</polygon>
-		<text id="text3988" transform="matrix(1 0 0 1 163.5336 351.2972)" class="st6 st7 st8">G</text>
+		<text id="textG" transform="matrix(1 0 0 1 163.5336 351.2972)" class="st6 st7 st8">G</text>
 	</g>
 	<g>
 		<polygon id="H" class="st2" points="239.1,270.3 232.8,281 226.6,291.7 214.2,291.7 201.7,291.7 195.6,281 189.2,270.3
 			195.6,259.4 201.7,248.7 214.2,248.7 226.6,248.7 232.8,259.4 		"/>
-		<text id="text3990" transform="matrix(1 0 0 1 206.8436 276.645)" class="st6 st7 st8">H</text>
+		<text id="textH" transform="matrix(1 0 0 1 206.8436 276.645)" class="st6 st7 st8">H</text>
 	</g>
 	<g>
 		<polygon id="I" inkscape:label="#polygon3924" class="st2" points="201.7,298.4 214.2,298.4 226.6,298.4 232.8,309.3 239.1,320
 			232.8,330.9 226.6,341.6 214.2,341.6 201.7,341.6 195.6,330.9 189.2,320 195.6,309.3 		">
 		</polygon>
-		<text id="text3992" transform="matrix(1 0 0 1 209.7464 326.4138)" class="st6 st7 st8">I</text>
+		<text id="textI" transform="matrix(1 0 0 1 209.7464 326.4138)" class="st6 st7 st8">I</text>
 	</g>
 	<g>
 		<polygon id="J" inkscape:label="#polygon3952" class="st2" points="282.1,245.4 276,256.2 269.7,267 257.4,267 244.9,267
 			238.6,256.2 232.4,245.4 238.6,234.7 244.9,223.8 257.4,223.8 269.7,223.8 276,234.7 		">
 		</polygon>
-		<text id="text3994" transform="matrix(1 0 0 1 252.5488 251.7599)" class="st6 st7 st8">J</text>
+		<text id="textJ" transform="matrix(1 0 0 1 252.5488 251.7599)" class="st6 st7 st8">J</text>
 	</g>
 	<g>
 		<polygon id="K" class="st2" points="282.1,295.1 276,306 269.7,316.7 257.4,316.7 244.9,316.7 238.6,306 232.4,295.1 238.6,284.4
 			244.9,273.7 257.4,273.7 269.7,273.7 276,284.4 		"/>
-		<text id="text3996" transform="matrix(1 0 0 1 250.4588 301.5286)" class="st6 st7 st8">K</text>
+		<text id="textK" transform="matrix(1 0 0 1 250.4588 301.5286)" class="st6 st7 st8">K</text>
 	</g>
 	<g>
 		<polygon id="L" class="st2" points="244.9,323.2 257.4,323.2 269.7,323.2 276,333.9 282.1,344.8 276,355.5 269.7,366.4
 			257.4,366.4 244.9,366.4 238.6,355.5 232.4,344.8 238.6,333.9 		"/>
-		<text id="text3998" transform="matrix(1 0 0 1 251.6537 351.2972)" class="st6 st7 st8">L</text>
+		<text id="textL" transform="matrix(1 0 0 1 251.6537 351.2972)" class="st6 st7 st8">L</text>
 	</g>
 	<polygon id="A-1" inkscape:label="#polygon3912" class="st9" points="83.7,257.3 77.3,268.1 65.1,268.1 52.6,268.1 46.3,257.3
 		40.1,246.5 46.3,235.8 52.6,224.9 65.1,224.9 77.3,224.9 83.7,235.8 89.8,246.5 	">
