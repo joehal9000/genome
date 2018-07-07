@@ -2,16 +2,17 @@
 <!--June 2018-->
 
 
-<!--TODO https://codepen.io/seme332/pen/reJOwo Add Shadow to indicate selection
+<!-- TODO https://codepen.io/seme332/pen/reJOwo Add Shadow to indicate selection -->
+<!--TODO Look into Letter E. The click tile might be wrong -->
 <!DOCTYPE html>
 <html>
 <head>
-<!- Load the Paper.js library -->
+<!-- Load the Paper.js library -->
 <script type="text/javascript" src="paper.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
 <!-- Define inlined PaperScript associate it with myCanvas -->
 <script type="text/paperscript" canvas="myCanvas">
-
+var testVar;
 //http://192.168.253.130/v08f.svg
 //https://people.cs.clemson.edu/~bullmer/processing/genomic-tree-13a.svg
  var svgX1 = project.importSVG("https://joehal9000.github.io/genome/v08h.svg",
@@ -26,10 +27,10 @@
 			project.getItems( {name: "F-1"}),
 			project.getItems( {name: "G-1"}),
 			project.getItems( {name: "H-1"}),
-			project.getItems( {name: "J-1"}),
 			project.getItems( {name: "I-1"}),
-			project.getItems( {name: "K-1"})
-			// project.getItems( {name: "L-1"})
+			project.getItems( {name: "J-1"}),
+			project.getItems( {name: "K-1"}),
+			project.getItems( {name: "L-1"})
 	]; //Select L Hexagon
 
 	var bottom = [project.getItems( {name: "A"}),
@@ -40,18 +41,33 @@
 		project.getItems( {name: "F"}),
 		project.getItems( {name: "G"}),
 		project.getItems( {name: "H"}),
-		project.getItems( {name: "J"}),
 		project.getItems( {name: "I"}),
+		project.getItems( {name: "J"}),
 		project.getItems( {name: "K"}),
 		project.getItems( {name: "L"})
 ];
 
-	console.log(top[0]);
+ textArr = [project.getItems({name: "textA"}),
+ 						project.getItems({name:"textB"}),
+						project.getItems({name:"textC"}),
+						project.getItems({name:"textD"}),
+						project.getItems({name:"textE"}),
+						project.getItems({name:"textF"}),
+						project.getItems({name:"textG"}),
+						project.getItems({name:"textH"}),
+						project.getItems({name:"textI"}),
+						project.getItems({name:"textJ"}),
+						project.getItems({name:"textK"}),
+						project.getItems({name:"textL"})
+];
+
+	// console.log(top[0]);
 	var origColor = (bottom[0][0].fillColor);
 	for (var i=0; i < top.length; i++) {
 		top[i][0].strokeColor = new Color(0,0,0); // Red outline
 		top[i][0]['isSelected'] = false;
 		top[i][0]['bottom'] = bottom[i][0];
+		top[i][0]['myText'] = textArr[i][0];
 
 		top[i][0].onClick = function(){
 			console.log("Anyone there?");
@@ -64,17 +80,26 @@
 		* Only highlight unselected objects or...?
 		*/
 		top[i][0].onMouseEnter = function(){
-			this.bottom.fillColor = new Color(0, 255, 0, 0.3);
-			this.bottom.position += new Point(0,-4);
-			this.position += new Point(0,-4);
+			var point = new Point(0,-4);
+			this.bottom.fillColor = "#ebea29";
+			this.bottom.position += point;
+			this.position += point;
+			this.myText.position += point;
+			this.bottom.shadowColor = "#ebea29";
+			this.bottom.shadowBlur = "12";
+			this.bottom.shadowOffset = new Point(0,5,20);
+
 
 		};
 
 		top[i][0].onMouseLeave = function(){
+			var point = new Point(0,4);
 			this.bottom.fillColor = this.isSelected ? new Color(0,255,0) : origColor;
-			//NOTE Would this move the top as well
-			this.bottom.position += new Point(0,4);
-			this.position += new Point(0,4);
+			this.bottom.position += point;
+			this.position += point;
+			this.myText.position += point;
+			this.bottom.shadowColor = null;
+
 
 		};
 
@@ -87,7 +112,7 @@
 
 	console.log(top);
 	top= null;
-
+	textArr =null;
 
    });
  //debugger;
@@ -96,7 +121,7 @@
 </head>
 <body>
 	<canvas
-		id="myCanvas" width="5000" height="5000" >
+		id="myCanvas" width="1000" height="1000" >
 	</canvas>
 </body>
 </html>
